@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174593391-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-174593391-1');
+    </script>
+
+    <title>Vietlott Suggestion</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://vietlott.letrunglab.info/v645.css">
+    <!-- <link rel="stylesheet" href="v645.css"> -->
+</head>
+
+<body>
+<div class="doso">
+    <div class="container">
+        <div class="row">
+            <div class="zone col-sm-12 col-md-12 col-lg-12 doso_input">
+                <div class="porlet border">
+                    <div class="header">
+                        <div class="doso_img"> <img src="https://vietlott.letrunglab.info/mega-645_full-baner.png"
+                                    alt="Mega 6/45"> </div><!-- /doso_img -->
+
+                        <div class="header-tool"> </div> <!-- /.header-tool -->
+                    </div> <!-- /.header -->
+                </div> <!-- /.porlet -->
+            </div> <!-- /.zone -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div id="text-button" class="col-sm-6 col-md-6 col-lg-6">
+                <h3>Click bellow button to try your lucky on viettlot!!!</h3>
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <button style="color: white;" class="button45" type="button" onclick="loadv645()">6/45</button>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <button style="color: white;" class="button55" type="button" onclick="loadv655()">6/55</button>
+                    </div>
+                </div>
+                <div>
+                    <a style ="text-decoration: none;" class="donate" target="_blank" href="https://bot.letrunglab.info">If you are happy, click here to donate!</a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <div class="porlet">
+                    <div class="header hidden">
+                        <div class="header-title"> </div> <!-- /.header-title -->
+                        <div class="header-tool"> </div> <!-- /.header-tool -->
+                    </div> <!-- /.header -->
+                    <div class="content" id="divResultContent">
+                        <div class="doso_output_nd table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>STT </th>
+                                        <th id="boso" style="text-align:center">Bộ số</th>
+                                    </tr>   
+                                </thead>
+                                <tbody id="result-rows">
+                                    <!-- Insert results -->
+                                </tbody>
+                            </table>
+                        </div><!-- /doso_output -->
+                    </div> <!-- /.content -->
+                    <div class="footer hidden"> </div> <!-- /.footer -->
+                </div> <!-- /.porlet -->
+            </div> <!-- /.zone --> 
+        </div>
+    </div>
+</div>
+    <script>
+        async function loadv645() {
+            console.log("loadDoc")
+            var url = "https://mfmc6fs3si.execute-api.us-east-1.amazonaws.com/v1/v645"
+            let response = await fetch(url);
+            let resJson = await response.json();
+            console.log(resJson);
+
+            var tbody = document.getElementById("result-rows")
+            tbody.innerHTML = "";
+
+            var boso = document.getElementById("boso")
+            boso.innerText = "Bộ Số 6/45"
+
+            var i;
+            for (i = 0; i < 5; i++) {
+                let j = i+1
+                var tbody = document.getElementById("result-rows")
+                tbody.insertAdjacentHTML("beforeend", '<tr>' + '<td>' + j + '</td>' + '<td style="text-align: center;">' + '<div id="stt1" class="day_so_ket_qua_v2" style="padding-top:15px">' + '<span class="bong_tron ">' + resJson[i][0] + '</span>' + '<span class="bong_tron ">' + resJson[i][1] + '</span>' + '<span class="bong_tron ">' + resJson[i][2] + '</span>' + '<span class="bong_tron ">' + resJson[i][3] + '</span>' + '<span class="bong_tron ">' + resJson[i][4] + '</span>' + '<span class="bong_tron ">' + resJson[i][5] + '</span>' +'</div>' + '</td>' + '</tr>');
+            }
+
+        }
+    </script>
+    <script>
+        async function loadv655() {
+            console.log("loadDoc")
+            var url = "https://mfmc6fs3si.execute-api.us-east-1.amazonaws.com/v1/v655"
+            let response = await fetch(url);
+            let resJson = await response.json();
+            console.log(resJson);
+
+            var tbody = document.getElementById("result-rows")
+            tbody.innerHTML = "";
+
+            var boso = document.getElementById("boso")
+            boso.innerText = "Bộ Số 6/55"
+
+            var i;
+            for (i = 0; i < 5; i++) {
+                let j = i + 1
+                var tbody = document.getElementById("result-rows")
+                tbody.insertAdjacentHTML("beforeend", '<tr>' + '<td>' + j + '</td>' + '<td style="text-align: center;">' + '<div id="stt1" class="day_so_ket_qua_v2" style="padding-top:15px">' + '<span class="bong_tron ">' + resJson[i][0] + '</span>' + '<span class="bong_tron ">' + resJson[i][1] + '</span>' + '<span class="bong_tron ">' + resJson[i][2] + '</span>' + '<span class="bong_tron ">' + resJson[i][3] + '</span>' + '<span class="bong_tron ">' + resJson[i][4] + '</span>' + '<span class="bong_tron ">' + resJson[i][5] + '</span>' + '<span class="bong_tron-sperator ">' + '|' + '</span>' + '<span class="bong_tron ">' + resJson[i][6] + '</span>' + '</div>' + '</td>' + '</tr>');
+            }
+        }
+    </script>
+</body>
+
+</html>

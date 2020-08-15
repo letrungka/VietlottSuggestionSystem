@@ -1,0 +1,108 @@
+#text-button {
+    font-family: MyriadPro_Semibold;
+    text-align: center;
+}
+
+.button45 {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin-top: 30px;
+  margin-right: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button55 {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin-top: 30px;
+  margin-left: 5px;
+  margin-right: 30px;
+  cursor: pointer;
+  width: 100%;
+}
+.donate {
+  background-color: #98da42;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 10px 4px 2px;
+  cursor: pointer;
+  width: 100%;
+}
+.day_so_ket_qua_v2 .bong_tron i {
+    font-style: initial;
+}
+
+.bong_tron-sperator {
+    	font-size: 25px;
+    	margin-right: 3px;
+}
+.table>thead>tr>th {
+    vertical-align: middle;
+}
+.doso_img img {
+    width: 45%;
+}
+
+.day_so_ket_qua_v2 .bong_tron {
+    border-radius: 50%;
+    border: red solid 1px;
+    padding: 7px;
+    font-size: 22px;
+    font-family: consolas;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+
+.day_so_ket_qua_v2 {
+    padding-bottom: 20px;
+}
+
+.table-responsive {
+    border: 0;
+}
+
+
+.border {
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.doso_output_nd .day_so_ket_qua {
+    margin: 0;
+}
+
+.doso_output_nd .table>tbody>tr>td, .doso_output_nd .table>tbody>tr>th, .doso_output_nd .table>tfoot>tr>td, .doso_output_nd .table>tfoot>tr>th, .doso_output_nd .table>thead>tr>td, .doso_output_nd .table>thead>tr>th {
+    vertical-align: initial;
+    color: #001452;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.doso_img {
+    text-align: center;
+    margin: 30px 0 20px 0;
+}
