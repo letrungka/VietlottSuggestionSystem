@@ -14,7 +14,10 @@ def get_set_numbers(pageindex,snum):
     pageindex = pageindex
     snum = snum
 
-    req = requests.get(url.format(pageindex))
+    try:
+        req = requests.get(url.format(pageindex), verify=False, timeout=30)
+    except Exception as e:
+        raise e
     soup = BeautifulSoup(req.text, 'html.parser')
 
     day_so_ket_qua_v2 = soup.find_all("div",{'class':'day_so_ket_qua_v2'})
