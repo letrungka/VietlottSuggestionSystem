@@ -7,12 +7,6 @@ redis_pw = os.environ['REDIS_PW']
 redis_port = os.environ['REDIS_PORT']
 redis_db = 0
 
-numS1 = get_set_numbers('removed_dup_num1')
-numS2 = get_set_numbers('removed_dup_num2')
-numS3 = get_set_numbers('removed_dup_num3')
-numS4 = get_set_numbers('removed_dup_num4')
-numS5 = get_set_numbers('removed_dup_num5')
-numS6 = get_set_numbers('removed_dup_num6')
 
 def get_set_numbers(key_name):
 
@@ -21,6 +15,13 @@ def get_set_numbers(key_name):
     list_data = json.loads(r.get(key_name))
 
     return list_data
+
+numS1 = get_set_numbers('removed_dup_num1')
+numS2 = get_set_numbers('removed_dup_num2')
+numS3 = get_set_numbers('removed_dup_num3')
+numS4 = get_set_numbers('removed_dup_num4')
+numS5 = get_set_numbers('removed_dup_num5')
+numS6 = get_set_numbers('removed_dup_num6')
 
 def random_func():
 
